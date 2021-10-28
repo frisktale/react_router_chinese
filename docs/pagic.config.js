@@ -2,9 +2,15 @@ export default {
     title: "React-router5 中文文档",
     description: "自建网站，方便自己查阅",
     theme: "docs",
+    srcDir: '.',
     outDir: "docs",
     plugins: ["sidebar"],
     root: "/react_router_chinese/",
+    github: "https://github.com/frisktale/react_router_chinese",
+    tools: {
+        editOnGitHub: true,
+        backToTop: true,
+    },
     sidebar: {
         "/": [
             {

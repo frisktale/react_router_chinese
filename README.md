@@ -1,6 +1,9 @@
 # React-router5 中文文档
 
 [原仓库](https://frisktale.github.io/react_router_chinese/)  
+**画个饼，有人提交pr就搞github action自动编译**
+***
+
 翻译起始时间: 2019-5-29  
 翻译结束时间: 2019-6-12  
 最后修订时间: 2019-6-12

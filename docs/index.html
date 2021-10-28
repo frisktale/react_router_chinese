@@ -1,0 +1,47 @@
+<!doctype html><html class="" data-reactroot=""><head>
+<meta data-react-helmet="true" charset="utf-8"/><meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"/><meta data-react-helmet="true" name="description" content="自建网站，方便自己查阅"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/><meta data-react-helmet="true" property="og:title" content="React-router5 中文文档"/><meta data-react-helmet="true" property="og:description" content="自建网站，方便自己查阅"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/>
+<title data-react-helmet="true">React-router5 中文文档</title>
+<link data-react-helmet="true" rel="stylesheet" href="/react_router_chinese/assets/index.css"/><link data-react-helmet="true" id="prismTheme" rel="stylesheet" href="/react_router_chinese/assets/prism.css"/>
+<script data-react-helmet="true" >
+    const shouldSetIsDark = document.cookie.includes('is_dark=1') ? true : document.cookie.includes('is_dark=0') ? false : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (shouldSetIsDark) {
+      document.documentElement.classList.add('is_dark');
+      document.getElementById('prismTheme').href = "/react_router_chinese/assets/prism_tomorrow.css";
+    }
+  </script>
+</head><body><header><h1 class="hide_on_mobile"><a href="/react_router_chinese/">React-router5 中文文档</a></h1><nav><ul><li class="show_on_mobile flex_center"><a class="czs-menu-l" href="#" style="background-image:url(&quot;/react_router_chinese/assets/czs-menu-l.svg&quot;)"></a></li><li class="show_on_mobile"><h1 class="mobile_title"><a href="/react_router_chinese/">React-router5 中文文档</a></h1></li><li style="flex-grow:1"></li><li class="toggle_dark flex_center"><span class="czs-sun" style="background-image:url(&quot;/react_router_chinese/assets/czs-sun.svg&quot;)"></span><span class="czs-sun-l" style="background-image:url(&quot;/react_router_chinese/assets/czs-sun-l.svg&quot;)"></span><span class="czs-moon" style="background-image:url(&quot;/react_router_chinese/assets/czs-moon.svg&quot;)"></span><span class="czs-moon-l" style="background-image:url(&quot;/react_router_chinese/assets/czs-moon-l.svg&quot;)"></span></li></ul></nav></header><aside class="sidebar"><ol class="list_style_none"><li class="unfold"><a href="/react_router_chinese/guides/QuickStart.html" class="nav_link">文档<span class="czs-angle-up-l" style="background-image:url(&quot;/react_router_chinese/assets/czs-angle-up-l.svg&quot;)"></span><span class="czs-angle-down-l" style="background-image:url(&quot;/react_router_chinese/assets/czs-angle-down-l.svg&quot;)"></span></a><ol class="list_style_none" style="height:auto"><li class=""><a href="/react_router_chinese/guides/QuickStart.html" class="nav_link">快速开始</a></li><li class=""><a href="/react_router_chinese/guides/BasicComponents.html" class="nav_link">基础组件</a></li><li class=""><a href="/react_router_chinese/guides/ServerRendering.html" class="nav_link">服务端渲染</a></li><li class=""><a href="/react_router_chinese/guides/CodeSplitting.html" class="nav_link">代码拆分</a></li><li class=""><a href="/react_router_chinese/guides/ScrollRestoration.html" class="nav_link">滚动恢复</a></li><li class=""><a href="/react_router_chinese/guides/Philosophy.html" class="nav_link">设计思想</a></li><li class=""><a href="/react_router_chinese/guides/Testting.html" class="nav_link">测试</a></li><li class=""><a href="/react_router_chinese/guides/ReduxIntegration.html" class="nav_link">集成 Redux</a></li><li class=""><a href="/react_router_chinese/guides/StaticRouter.html" class="nav_link">静态路由</a></li></ol></li><li class=""><a href="/react_router_chinese/API/API.html" class="nav_link">API</a></li></ol></aside><section class="main"><div class="main_article"><article><h1>React-router5 中文文档</h1>
+<p>翻译起始时间: 2019-5-29<br>
+翻译结束时间: 2019-6-12<br>
+最后修订时间: 2019-6-12</p>
+<p>翻译: Harlan.Zhang<br>
+前言: 因为本人所在公司前端的技术栈主要是 Vue,所以为了扩展自己的技术栈,打算实践一下 React,但是 React 本身的中文资源不如 Vue 丰富。尤其是 React-router，我在网上没有找到很合适的中文资源，只好去啃英文文档，同时也打算把相关的文档翻译一下，本人水平有限，如有错误或者不合适的地方，欢迎指出。</p>
+<h2 id="%E7%9B%AE%E5%BD%95">目录<a class="anchor" href="#%E7%9B%AE%E5%BD%95">§</a></h2>
+<h3 id="%E7%A4%BA%E4%BE%8B">示例<a class="anchor" href="#%E7%A4%BA%E4%BE%8B">§</a></h3>
+<p>该部分全部是各种示例的代码和运行结果，除了代码的注释没有需要翻译的地方，暂时不考虑翻译，推荐直接看<a href="https://reacttraining.com/react-router/web/example/basic">官网</a></p>
+<h3 id="%E6%8C%87%E5%8D%97">指南<a class="anchor" href="#%E6%8C%87%E5%8D%97">§</a></h3>
+<p><a href="./guides/QuickStart.html">快速开始</a><br>
+<a href="./guides/BasicComponents.html">基础组件</a><br>
+<a href="./guides/ServerRendering.html">服务端渲染</a><br>
+<a href="./guides/CodeSplitting.html">代码拆分</a><br>
+<a href="./guides/ScrollRestoration.html">滚动恢复</a><br>
+<a href="./guides/Philosophy.html">设计思想</a><br>
+<a href="./guides/Testting.html">测试</a><br>
+<a href="./guides/ReduxIntegration.html">集成 Redux</a><br>
+<a href="./guides/StaticRouter.html">静态路由</a></p>
+<h3 id="api-%E6%96%87%E6%A1%A3">API 文档<a class="anchor" href="#api-%E6%96%87%E6%A1%A3">§</a></h3>
+<p><a href="./API/API.html#-browserrouter-">BrowserRouter</a><br>
+<a href="./API/API.html#-hashrouter-">HashRouter</a><br>
+<a href="./API/API.html#-link-">Link</a><br>
+<a href="./API/API.html#-navlink-">NavLink</a><br>
+<a href="./API/API.html#-prompt-">Prompt</a><br>
+<a href="./API/API.html#-memoryrouter-">MemoryRouter</a><br>
+<a href="./API/API.html#-redirect-">Redirect</a><br>
+<a href="./API/API.html#-route-">Route</a><br>
+<a href="./API/API.html#-router-">Router</a><br>
+<a href="./API/API.html#-staticrouter-">StaticRouter</a><br>
+<a href="./API/API.html#-switch-">Switch</a><br>
+<a href="./API/API.html#history">history</a><br>
+<a href="./API/API.html#location">location</a><br>
+<a href="./API/API.html#match">match</a><br>
+<a href="./API/API.html#matchpath">matchPath</a><br>
+<a href="./API/API.html#withrouter">withRouter</a></p></article></div><aside class="main_toc_container nav_link_container"><div class="main_toc"><nav class="toc"><ol><li><a href="#%E7%9B%AE%E5%BD%95">目录</a><ol><li><a href="#%E7%A4%BA%E4%BE%8B">示例</a></li><li><a href="#%E6%8C%87%E5%8D%97">指南</a></li><li><a href="#api-%E6%96%87%E6%A1%A3">API 文档</a></li></ol></li></ol></nav></div></aside></section><footer>Powered by&amp;nbsp;<a href="https://github.com/xcatliu/pagic" target="_blank">Pagic</a></footer><script src="https://cdn.pagic.org/react@17.0.2/umd/react.production.min.js"></script><script src="https://cdn.pagic.org/react-dom@17.0.2/umd/react-dom.production.min.js"></script><script type="module" src="/react_router_chinese/index.js"></script></body></html>

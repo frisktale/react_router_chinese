@@ -1,0 +1,91 @@
+<!doctype html><html class="" data-reactroot=""><head>
+<meta data-react-helmet="true" charset="utf-8"/><meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"/><meta data-react-helmet="true" name="description" content="自建网站，方便自己查阅"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/><meta data-react-helmet="true" property="og:title" content="React-router5 中文文档"/><meta data-react-helmet="true" property="og:description" content="自建网站，方便自己查阅"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" name="twitter:card" content="summary"/>
+<title data-react-helmet="true">React-router5 中文文档</title>
+<link data-react-helmet="true" rel="stylesheet" href="/react_router_chinese/assets/index.css"/><link data-react-helmet="true" id="prismTheme" rel="stylesheet" href="/react_router_chinese/assets/prism.css"/>
+<script data-react-helmet="true" >
+    const shouldSetIsDark = document.cookie.includes('is_dark=1') ? true : document.cookie.includes('is_dark=0') ? false : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (shouldSetIsDark) {
+      document.documentElement.classList.add('is_dark');
+      document.getElementById('prismTheme').href = "/react_router_chinese/assets/prism_tomorrow.css";
+    }
+  </script>
+</head><body><header><h1 class="hide_on_mobile"><a href="/react_router_chinese/">React-router5 中文文档</a></h1><nav><ul><li class="show_on_mobile flex_center"><a class="czs-menu-l" href="#" style="background-image:url(&quot;/react_router_chinese/assets/czs-menu-l.svg&quot;)"></a></li><li class="show_on_mobile"><h1 class="mobile_title"><a href="/react_router_chinese/">React-router5 中文文档</a></h1></li><li style="flex-grow:1"></li><li class="toggle_dark flex_center"><span class="czs-sun" style="background-image:url(&quot;/react_router_chinese/assets/czs-sun.svg&quot;)"></span><span class="czs-sun-l" style="background-image:url(&quot;/react_router_chinese/assets/czs-sun-l.svg&quot;)"></span><span class="czs-moon" style="background-image:url(&quot;/react_router_chinese/assets/czs-moon.svg&quot;)"></span><span class="czs-moon-l" style="background-image:url(&quot;/react_router_chinese/assets/czs-moon-l.svg&quot;)"></span></li></ul></nav></header><aside class="sidebar"><ol class="list_style_none"><li class="unfold"><a href="/react_router_chinese/guides/QuickStart.html" class="nav_link">文档<span class="czs-angle-up-l" style="background-image:url(&quot;/react_router_chinese/assets/czs-angle-up-l.svg&quot;)"></span><span class="czs-angle-down-l" style="background-image:url(&quot;/react_router_chinese/assets/czs-angle-down-l.svg&quot;)"></span></a><ol class="list_style_none" style="height:auto"><li class=""><a href="/react_router_chinese/guides/QuickStart.html" class="nav_link">快速开始</a></li><li class=""><a href="/react_router_chinese/guides/BasicComponents.html" class="nav_link active">基础组件</a></li><li class=""><a href="/react_router_chinese/guides/ServerRendering.html" class="nav_link">服务端渲染</a></li><li class=""><a href="/react_router_chinese/guides/CodeSplitting.html" class="nav_link">代码拆分</a></li><li class=""><a href="/react_router_chinese/guides/ScrollRestoration.html" class="nav_link">滚动恢复</a></li><li class=""><a href="/react_router_chinese/guides/Philosophy.html" class="nav_link">设计思想</a></li><li class=""><a href="/react_router_chinese/guides/Testting.html" class="nav_link">测试</a></li><li class=""><a href="/react_router_chinese/guides/ReduxIntegration.html" class="nav_link">集成 Redux</a></li><li class=""><a href="/react_router_chinese/guides/StaticRouter.html" class="nav_link">静态路由</a></li></ol></li><li class=""><a href="/react_router_chinese/API/API.html" class="nav_link">API</a></li></ol></aside><section class="main"><div class="main_article"><article><h2 id="%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6">基础组件<a class="anchor" href="#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6">§</a></h2>
+<p>React Router包含三种类型的组件： 路由组件，路由匹配组件，导航组件。</p>
+<p>在你使用这些组件前，都必须从react-router-dom导入她们。</p>
+<pre class="language-autoit"><code class="language-autoit">import { BrowserRouter<span class="token punctuation">,</span> Route<span class="token punctuation">,</span> Link } from <span class="token string">"react-router-dom"</span><span class="token comment">;</span>
+</code></pre>
+<h3 id="%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6">路由组件<a class="anchor" href="#%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6">§</a></h3>
+<p>任何一个拥有路由跳转功能都React应用都核心都必须是一个路由组件。对于Web项目来说，react-router-dom提供了&lt; BrowserRouter &gt;和&lt; HashRouter &gt;这两种路由。她们会为你创建一个专业的history对象。通常来说，如果你有一个服务器来响应请求，那就使用&lt; BrowserRouter &gt;。如果你是用静态文件来提供服务，那么就使用 &lt; HashRouter &gt;</p>
+<pre class="language-autoit"><code class="language-autoit">import { BrowserRouter } from <span class="token string">"react-router-dom"</span><span class="token comment">;</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>BrowserRouter<span class="token operator">></span>
+    <span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>BrowserRouter<span class="token operator">></span><span class="token punctuation">,</span>
+  holder
+<span class="token punctuation">)</span><span class="token comment">;</span>
+</code></pre>
+<h3 id="%E8%B7%AF%E7%94%B1%E5%8C%B9%E9%85%8D%E7%BB%84%E4%BB%B6">路由匹配组件<a class="anchor" href="#%E8%B7%AF%E7%94%B1%E5%8C%B9%E9%85%8D%E7%BB%84%E4%BB%B6">§</a></h3>
+<p>路由匹配组件有两种：&lt; Route &gt;和&lt; Switch &gt;<br>
+路由匹配组件通过比较&lt; Route &gt;的path属性和当前页面地址栏的路径来工作。当一个&lt; Route &gt;匹配成功的时候，她会渲染出对应的内容，当匹配不成功的时候，任何内容都不会被渲染出来。当一个&lt; Route &gt;没有path属性时她对任何路径都会匹配成功。<br>
+你可以在你想要根据浏览器地址来渲染内容的任何地方使用&lt; Route &gt;,但是我们通常会把一组&lt; Route &gt;放在一起。&lt; Switch &gt;就是用来把多个&lt; Route &gt;组合在一起的。<br>
+我们不是必须要用&lt; Switch &gt;把多个&lt; Route &gt;组合在一起，但是这种做法通常是有用的。 &lt; Switch &gt;将迭代其所有子&lt; Route &gt;元素，并仅渲染与当前路径匹配的第一个子元素。 她对于多个path匹配相同的路径、动画路由之间的转换、没有路径匹配时的识别（这样你就可以渲染“404”组件）是有很大帮助的。</p>
+<pre class="language-autoit"><code class="language-autoit">import { Route<span class="token punctuation">,</span> <span class="token keyword">Switch</span> } from <span class="token string">"react-router-dom"</span><span class="token comment">;</span>
+<span class="token operator">/</span><span class="token operator">/</span> when location <span class="token operator">=</span> { pathname<span class="token punctuation">:</span> <span class="token string">'/about'</span> }
+<span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">'/about'</span> component<span class="token operator">=</span>{About}<span class="token operator">/</span><span class="token operator">></span> <span class="token operator">/</span><span class="token operator">/</span> renders <span class="token operator">&lt;</span>About<span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">'/contact'</span> component<span class="token operator">=</span>{Contact}<span class="token operator">/</span><span class="token operator">></span> <span class="token operator">/</span><span class="token operator">/</span> renders <span class="token keyword">null</span>
+<span class="token operator">&lt;</span>Route component<span class="token operator">=</span>{Always}<span class="token operator">/</span><span class="token operator">></span> <span class="token operator">/</span><span class="token operator">/</span> renders <span class="token operator">&lt;</span>Always<span class="token operator">/</span><span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token keyword">Switch</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Route exact path<span class="token operator">=</span><span class="token string">"/"</span> component<span class="token operator">=</span>{Home} <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">"/about"</span> component<span class="token operator">=</span>{About} <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">"/contact"</span> component<span class="token operator">=</span>{Contact} <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span><span class="token keyword">Switch</span><span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token keyword">Switch</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Route exact path<span class="token operator">=</span><span class="token string">"/"</span> component<span class="token operator">=</span>{Home} <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">"/about"</span> component<span class="token operator">=</span>{About} <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">"/contact"</span> component<span class="token operator">=</span>{Contact} <span class="token operator">/</span><span class="token operator">></span>
+  {<span class="token operator">/</span><span class="token operator">*</span> when none of the above match<span class="token punctuation">,</span> <span class="token operator">&lt;</span>NoMatch<span class="token operator">></span> will be rendered <span class="token operator">*</span><span class="token operator">/</span>}
+  <span class="token operator">&lt;</span>Route component<span class="token operator">=</span>{NoMatch} <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span><span class="token keyword">Switch</span><span class="token operator">></span>
+</code></pre>
+<h3 id="%E8%B7%AF%E7%94%B1%E6%B8%B2%E6%9F%93%E5%B1%9E%E6%80%A7">路由渲染属性<a class="anchor" href="#%E8%B7%AF%E7%94%B1%E6%B8%B2%E6%9F%93%E5%B1%9E%E6%80%A7">§</a></h3>
+<p>对于一个&lt; Route &gt;组件，你可以设置三种属性：component, render, children 来渲染出相应的内容。在这里我们只关注component和render,因为她们是经常会用到的，更多的内容可以查看&lt; Route &gt;的API文档。</p>
+<p>当你有一个已存在的组件（无论是一个React组件还是一个无状态的函数组件）想要渲染时应该使用component。当你必须传递一些参数变量给组件时应该用render属性，她采用内联函数的形式。你不应该使用component属性来渲染一个带有参数变量的内联函数组件，这会导致不必要的组件的挂载和卸载。</p>
+<pre class="language-autoit"><code class="language-autoit"><span class="token keyword">const</span> Home <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&lt;</span>div<span class="token operator">></span>Home<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token comment">;</span>
+
+<span class="token keyword">const</span> App <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> {
+  <span class="token keyword">const</span> someVariable <span class="token operator">=</span> <span class="token boolean">true</span><span class="token comment">;</span>
+
+  return <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span><span class="token keyword">Switch</span><span class="token operator">></span>
+      {<span class="token operator">/</span><span class="token operator">*</span> these are good <span class="token operator">*</span><span class="token operator">/</span>}
+      <span class="token operator">&lt;</span>Route exact path<span class="token operator">=</span><span class="token string">"/"</span> component<span class="token operator">=</span>{Home} <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Route
+        path<span class="token operator">=</span><span class="token string">"/about"</span>
+        render<span class="token operator">=</span>{props <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&lt;</span>About {<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>props} extra<span class="token operator">=</span>{someVariable} <span class="token operator">/</span><span class="token operator">></span>}
+      <span class="token operator">/</span><span class="token operator">></span>
+      {<span class="token operator">/</span><span class="token operator">*</span> <span class="token keyword">do</span> <span class="token operator">not</span> <span class="token keyword">do</span> this <span class="token operator">*</span><span class="token operator">/</span>}
+      <span class="token operator">&lt;</span>Route
+        path<span class="token operator">=</span><span class="token string">"/contact"</span>
+        component<span class="token operator">=</span>{props <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&lt;</span>Contact {<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>props} extra<span class="token operator">=</span>{someVariable} <span class="token operator">/</span><span class="token operator">></span>}
+      <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token keyword">Switch</span><span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token comment">;</span>
+}<span class="token comment">;</span>
+</code></pre>
+<h3 id="%E5%AF%BC%E8%88%AA%E7%BB%84%E4%BB%B6">导航组件<a class="anchor" href="#%E5%AF%BC%E8%88%AA%E7%BB%84%E4%BB%B6">§</a></h3>
+<p>React Router 提供了&lt; Link &gt;组件用来在你的应用中创建超链接。&lt; Link &gt;会在页面的任何地方被渲染成&lt; a &gt;标签</p>
+<p>&lt; NavLink &gt;是一种特殊的&lt; Link &gt;组件，当她的to属性匹配地址栏的路径时，她渲染成的&lt; a &gt;标签会带有'active'的样式。</p>
+<p>如果你想要强制跳转，你可以使用&lt; Redirect &gt;。当一个&lt; Redirect &gt;组件被渲染时，她会导航到其to属性匹配的路径。</p>
+<pre class="language-autoit"><code class="language-autoit"><span class="token operator">&lt;</span>Link <span class="token keyword">to</span><span class="token operator">=</span><span class="token string">"/"</span><span class="token operator">></span>Home<span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+<span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">'/'</span><span class="token operator">></span>Home<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+
+<span class="token operator">/</span><span class="token operator">/</span> location <span class="token operator">=</span> { pathname<span class="token punctuation">:</span> <span class="token string">'/react'</span> }
+<span class="token operator">&lt;</span>NavLink <span class="token keyword">to</span><span class="token operator">=</span><span class="token string">"/react"</span> activeClassName<span class="token operator">=</span><span class="token string">"hurray"</span><span class="token operator">></span>
+  React
+<span class="token operator">&lt;</span><span class="token operator">/</span>NavLink<span class="token operator">></span>
+<span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">'/react'</span> className<span class="token operator">=</span><span class="token string">'hurray'</span><span class="token operator">></span>React<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>Redirect <span class="token keyword">to</span><span class="token operator">=</span><span class="token string">"/login"</span> <span class="token operator">/</span><span class="token operator">></span>
+</code></pre></article></div><aside class="main_toc_container nav_link_container"><div class="main_toc"><nav class="toc"><ol><li><a href="#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6">基础组件</a><ol><li><a href="#%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6">路由组件</a></li><li><a href="#%E8%B7%AF%E7%94%B1%E5%8C%B9%E9%85%8D%E7%BB%84%E4%BB%B6">路由匹配组件</a></li><li><a href="#%E8%B7%AF%E7%94%B1%E6%B8%B2%E6%9F%93%E5%B1%9E%E6%80%A7">路由渲染属性</a></li><li><a href="#%E5%AF%BC%E8%88%AA%E7%BB%84%E4%BB%B6">导航组件</a></li></ol></li></ol></nav></div></aside></section><footer>Powered by&amp;nbsp;<a href="https://github.com/xcatliu/pagic" target="_blank">Pagic</a></footer><script src="https://cdn.pagic.org/react@17.0.2/umd/react.production.min.js"></script><script src="https://cdn.pagic.org/react-dom@17.0.2/umd/react-dom.production.min.js"></script><script type="module" src="/react_router_chinese/index.js"></script></body></html>

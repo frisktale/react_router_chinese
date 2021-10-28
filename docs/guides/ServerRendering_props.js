@@ -33,10 +33,13 @@ export default {
                         React.createElement("a", { href: "#%E7%BB%84%E5%90%88%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9" }, "\u7EC4\u5408\u6240\u6709\u5185\u5BB9")),
                     React.createElement("li", null,
                         React.createElement("a", { href: "#%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD" }, "\u6570\u636E\u52A0\u8F7D")))))),
-    'author': undefined,
-    'contributors': [],
-    'date': "2021-10-28T10:02:43.660Z",
-    'updated': null,
+    'author': "Kanzaki-H-Aria",
+    'contributors': [
+        "Kanzaki-H-Aria",
+        "frisktale"
+    ],
+    'date': "2019-05-31T09:25:04.000Z",
+    'updated': "2021-10-28T10:09:03.000Z",
     'excerpt': "服务端渲染 由于服务端是无状态的，所以服务端渲染和客户端渲染并不相同. 最基本的就是我们封装app时, 使用无状态的 < StaticRouter >来代替< BrowserRouter >, 使用来自于服务端的请求url来匹配路由。接下来我们会讨论 contex...",
     'cover': undefined,
     'sidebar': [

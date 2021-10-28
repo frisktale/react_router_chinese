@@ -27,10 +27,13 @@ export default {
                 React.createElement("ol", null,
                     React.createElement("li", null,
                         React.createElement("a", { href: "#%E4%BB%A3%E7%A0%81%E6%8B%86%E5%88%86%E5%92%8Cserver-side%E6%B8%B2%E6%9F%93" }, "\u4EE3\u7801\u62C6\u5206\u548CServer-Side\u6E32\u67D3")))))),
-    'author': undefined,
-    'contributors': [],
-    'date': "2021-10-28T10:02:43.660Z",
-    'updated': null,
+    'author': "Kanzaki-H-Aria",
+    'contributors': [
+        "Kanzaki-H-Aria",
+        "frisktale"
+    ],
+    'date': "2019-06-04T06:56:32.000Z",
+    'updated': "2021-10-28T10:09:03.000Z",
     'excerpt': "代码拆分 Web应用一个非常出色的特性就是我们不必下载整个应用就可以使用。你可以认为代码拆分是逐渐递增的加载我们的应用。在这里，我们使用webpack, @babel/plugin-syntax-dynamic-import,和loadable-components来实现。 web...",
     'cover': undefined,
     'sidebar': [

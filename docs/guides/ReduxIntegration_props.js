@@ -29,10 +29,13 @@ export default {
                         React.createElement("a", { href: "#%E9%98%BB%E5%A1%9E%E6%9B%B4%E6%96%B0" }, "\u963B\u585E\u66F4\u65B0")),
                     React.createElement("li", null,
                         React.createElement("a", { href: "#%E6%B7%B1%E5%BA%A6%E9%9B%86%E6%88%90" }, "\u6DF1\u5EA6\u96C6\u6210")))))),
-    'author': undefined,
-    'contributors': [],
-    'date': "2021-10-28T10:02:43.660Z",
-    'updated': null,
+    'author': "Kanzaki-H-Aria",
+    'contributors': [
+        "Kanzaki-H-Aria",
+        "frisktale"
+    ],
+    'date': "2019-06-05T07:07:27.000Z",
+    'updated': "2021-10-28T10:09:03.000Z",
     'excerpt': "Redux集成 Redux是React生态系统的重要组成部分。我们希望将React Router和Redux尽可能地无缝集成以满足人们想要同时使用她们的需求。 阻塞更新 通常，React Router和Redux可以很好地协同工作。但有时，应用可能会发生有一个组...",
     'cover': undefined,
     'sidebar': [

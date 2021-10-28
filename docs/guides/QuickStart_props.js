@@ -31,10 +31,13 @@ export default {
                         React.createElement("a", { href: "#%E7%A4%BA%E4%BE%8B%E5%9F%BA%E7%A1%80%E8%B7%AF%E7%94%B1" }, "\u793A\u4F8B\uFF1A\u57FA\u7840\u8DEF\u7531")),
                     React.createElement("li", null,
                         React.createElement("a", { href: "#%E7%A4%BA%E4%BE%8B%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1" }, "\u793A\u4F8B\uFF1A\u5D4C\u5957\u8DEF\u7531")))))),
-    'author': undefined,
-    'contributors': [],
-    'date': "2021-10-28T10:02:43.660Z",
-    'updated': null,
+    'author': "Kanzaki-H-Aria",
+    'contributors': [
+        "Kanzaki-H-Aria",
+        "frisktale"
+    ],
+    'date': "2019-05-30T07:03:48.000Z",
+    'updated': "2021-10-28T10:09:03.000Z",
     'excerpt': "快速开始 你需要一个React web app 来添加react-router。 如果你需要创建一个新的React Web App,最容易的方式是通过一个叫做create-react-app的官方脚手架来创建。 第一步是先来安装create-react-app,如果你以及安装过这个工具...",
     'cover': undefined,
     'sidebar': [

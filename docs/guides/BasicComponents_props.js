@@ -33,10 +33,14 @@ export default {
                         React.createElement("a", { href: "#%E8%B7%AF%E7%94%B1%E6%B8%B2%E6%9F%93%E5%B1%9E%E6%80%A7" }, "\u8DEF\u7531\u6E32\u67D3\u5C5E\u6027")),
                     React.createElement("li", null,
                         React.createElement("a", { href: "#%E5%AF%BC%E8%88%AA%E7%BB%84%E4%BB%B6" }, "\u5BFC\u822A\u7EC4\u4EF6")))))),
-    'author': undefined,
-    'contributors': [],
-    'date': "2021-10-28T10:02:43.660Z",
-    'updated': null,
+    'author': "Kanzaki-H-Aria",
+    'contributors': [
+        "Kanzaki-H-Aria",
+        "tangdunwang",
+        "frisktale"
+    ],
+    'date': "2019-05-31T07:22:58.000Z",
+    'updated': "2021-10-28T10:09:03.000Z",
     'excerpt': "基础组件 React Router包含三种类型的组件： 路由组件，路由匹配组件，导航组件。 在你使用这些组件前，都必须从react-router-dom导入她们。 import { BrowserRouter, Route, Link } from \"react-router-dom\"; 路由组件 任何一...",
     'cover': undefined,
     'sidebar': [

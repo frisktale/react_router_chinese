@@ -29,10 +29,13 @@ export default {
                         React.createElement("a", { href: "#%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B6%E9%83%A8" }, "\u6EDA\u52A8\u5230\u9876\u90E8")),
                     React.createElement("li", null,
                         React.createElement("a", { href: "#%E9%80%9A%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" }, "\u901A\u7528\u89E3\u51B3\u65B9\u6848")))))),
-    'author': undefined,
-    'contributors': [],
-    'date': "2021-10-28T10:02:43.660Z",
-    'updated': null,
+    'author': "Kanzaki-H-Aria",
+    'contributors': [
+        "Kanzaki-H-Aria",
+        "frisktale"
+    ],
+    'date': "2019-06-04T09:22:46.000Z",
+    'updated': "2021-10-28T10:09:03.000Z",
     'excerpt': "滚动恢复 在早期的React Router版本中，我们为滚动恢复提供了开箱即用的支持，从那时起开发者就一直在使用。希望本文档可以帮助你获取你需要的滚动条和路由的内容。 浏览器已经开始使用history.pushState自己处理滚动恢复，这就...",
     'cover': undefined,
     'sidebar': [

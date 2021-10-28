@@ -24,9 +24,11 @@ export default {
         React.createElement("ol", null,
             React.createElement("li", null,
                 React.createElement("a", { href: "#%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1" }, "\u9759\u6001\u8DEF\u7531")))),
-    'author': undefined,
-    'contributors': [],
-    'date': "2021-10-28T10:02:43.660Z",
+    'author': "frisktale",
+    'contributors': [
+        "frisktale"
+    ],
+    'date': "2021-10-28T10:09:03.000Z",
     'updated': null,
     'excerpt': "静态路由 以前版本的 React Router 使用静态路由来配置应用的路由跳转。这允许在渲染之前检查和匹配路由。由于 v4 版本我们转移到动态路由组件而不是静态路由配置，一些以前的用例变得不那么明显和棘手。 我们现在正在开发一个...",
     'cover': undefined,

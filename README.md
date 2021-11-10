@@ -1,6 +1,6 @@
 # React-router5 中文文档
 
-[原仓库](https://github.com/remix-run/react-router)  
+[原仓库](https://github.com/Harlan-ZhangDongXing/React-router-chinese)  
 **画个饼，有人提交 pr 就搞 github action 自动编译**
 
 ---
